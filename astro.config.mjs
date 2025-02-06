@@ -41,17 +41,18 @@ export default defineConfig({
             },
           ],
         },
-        {
-          label: "Essentials",
-          items: [
-            { label: "Hypermedia", slug: "essentials/hypermedia" },
-            { label: "REST", slug: "essentials/rest" },
-            { label: "Signals", slug: "essentials/signals" },
-            { label: "Server Sent Events", slug: "essentials/sse" },
-            { label: "Expressions", slug: "essentials/expressions" },
-            // { label: "Accessibility", slug: "essentials/accessibility" },
-          ],
-        },
+        // {
+        //   label: "Essentials",
+        //   collapsed: true,
+        //   items: [
+        //     { label: "Hypermedia", slug: "essentials/hypermedia" },
+        //     { label: "REST", slug: "essentials/rest" },
+        //     { label: "Signals", slug: "essentials/signals" },
+        //     { label: "Server Sent Events", slug: "essentials/sse" },
+        //     { label: "Expressions", slug: "essentials/expressions" },
+        //     { label: "Accessibility", slug: "essentials/accessibility" },
+        //   ],
+        // },
         {
           label: "References",
           collapsed: true,
@@ -69,12 +70,10 @@ export default defineConfig({
         },
         {
           label: "Examples",
-          collapsed: true,
           autogenerate: { directory: "examples" },
         },
         {
           label: "Essays",
-          collapsed: true,
           items: [
             {
               label: "Another Dependency",

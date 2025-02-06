@@ -6,8 +6,7 @@ description: A reference page in my new Starlight docs site.
 import { Code } from "@astrojs/starlight/components";
 import importedCode from "/src/pages/sse/[...path].ts?raw";
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+This example uses a Hono to handle routing behind an Astro site. Click on the `Merge` button below to stream data from the backend.
 
 <button id="merge-button" data-on-click="@get('/sse')">
   Merge
@@ -15,7 +14,3 @@ Less concerned with telling a story or addressing a specific use case, they shou
 <p id="merge-text">Merge here</p>
 
 <Code code={importedCode} lang="ts" title="sse.ts" />
-
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework

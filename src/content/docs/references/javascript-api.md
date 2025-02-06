@@ -3,9 +3,44 @@ title: JavaScript API
 description: A guide in my new Starlight docs site.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+Datastar is intentional about not (indecently) exposing itself in the global scope – you _should_ be able to do everything you need via Datastar expressions in [attribute plugins](/reference/attribute_plugins) and [`datastar-execute-script`](/reference/sse_events#datastar-execute-script) SSE events.
 
-## Further reading
+When troubleshooting an issue, it may be useful to see the current state of the signals. The easiest way to do this is by outputting them in JSON format using `data-text`.
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+```html
+<div data-text="ctx.signals.JSON()"></div>
+```
+
+While it is generally recommended against, you can manually import the Datastar object and access its public methods and properties.
+
+```html
+<script type="module">
+  import { Datastar } from "/path/to/datastar.js";
+
+  console.log(Datastar.signals.values());
+</script>
+```
+
+## Public Methods
+
+The Datastar object exposes the following methods.
+
+### `load()`
+
+Loads all plugins and applies them to the DOM.
+
+```js
+Datastar.load();
+```
+
+## Public Properties
+
+The Datastar object exposes the following properties.
+
+### `signals`
+
+The signal root, on which you can access signal methods. Beware that you should avoid using this for anything other than troubleshooting.
+
+```js
+Datastar.signals.values();
+```
