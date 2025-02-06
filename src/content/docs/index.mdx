@@ -1,36 +1,55 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: DATASTAR
+description: The hypermedia framework.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Datastar helps you build reactive web applications with the simplicity of server-side rendering and the power of a full-stack SPA framework.
   image:
-    file: ../../assets/houston.webp
+    file: https://data-star.dev/static/images/rocket.webp
   actions:
+    - text: Get Started
+      link: /intro/getting-started
+      icon: rocket
     - text: Example Guide
-      link: /guides/example/
+      link: /guides/example
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+      variant: secondary
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+Include Datastar with a single **13.3 KiB** file and start adding reactivity to your frontend immediately. Write your backend in the language of your choice! Official **SDKs** are available to help you get up and running even faster, with more languages on the way.
+
+Getting started is as easy as adding a single script tag to your HTML.
+
+```javascript
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/gh/starfederation/datastar@v1.0.0-beta.3/bundles/datastar.js"
+></script>
+```
+
+Then start adding frontend reactivity using declarative data-\* attributes.
+
+```html
+<input data-bind-title />
+<div data-text="$title.toUpperCase()"></div>
+<button data-on-click="@post('/endpoint')">Save</button>
+```
 
 ## Next steps
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<CardGrid>
+  <Card title="Join the Community" icon="comment-alt">
+    Get involved and help shape the future of Datastar!
+  </Card>
+  <Card title="Read our Philosophy" icon="rocket">
+    Learn how to use Datastar to build hypermedia applications.
+  </Card>
+  <Card title="Read the docs" icon="open-book">
+    Learn more in [the Datastar Docs](/intro/getting-started).
+  </Card>
+  <Card title="Try it out" icon="seti:html">
+    Check out examples and start building!
+  </Card>
 </CardGrid>

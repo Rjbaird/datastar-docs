@@ -1,10 +1,20 @@
 ---
-title: Example Reference
+title: Astro Hono Example
 description: A reference page in my new Starlight docs site.
 ---
 
+import { Code } from "@astrojs/starlight/components";
+import importedCode from "/src/pages/sse/[...path].ts?raw";
+
 Reference pages are ideal for outlining how things work in terse and clear terms.
 Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+
+<button id="merge-button" data-on-click="@get('/sse')">
+  Merge
+</button>
+<p id="merge-text">Merge here</p>
+
+<Code code={importedCode} lang="ts" title="sse.ts" />
 
 ## Further reading
 

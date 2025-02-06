@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "datastar-docs",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -12,6 +12,8 @@
   "dependencies": {
     "@astrojs/starlight": "^0.31.1",
     "astro": "^5.1.5",
+    "hono": "^4.6.20",
+    "nanoid": "^5.0.9",
     "sharp": "^0.32.5"
   }
 }
